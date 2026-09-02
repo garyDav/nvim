@@ -59,3 +59,8 @@ vim.filetype.add({
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_picker = "telescope"
 vim.g.lazyvim_cmp = "blink.cmp"
+
+-- NIGHTLY_VIM: build 0.12.0-dev-721 lacks vim.text.diff (conform needs it)
+if vim.text and not vim.text.diff and vim.diff then
+  vim.text.diff = vim.diff
+end

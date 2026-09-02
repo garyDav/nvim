@@ -15,7 +15,7 @@ return {
 
 	{
 		"brenoprata10/nvim-highlight-colors",
-		event = "BufReadPre",
+		event = "BufReadPost",
 		opts = {
 			render = "background",
 			enable_hex = true,
